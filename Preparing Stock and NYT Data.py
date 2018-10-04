@@ -1,10 +1,3 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Apr  4 14:30:12 2017
-
-@author: Dinesh
-"""
 
 import numpy as np
 import csv, json
@@ -17,11 +10,11 @@ import pandas as pd
 
 with open('#File name', 'rb') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
-    # Converting the csv file reader to a lists 
+    # Converting the csv file reader to list
     data_list = list(spamreader)
 
-# Separating header from the data
-header = data_list[0] 
+
+#Get rid of header (list[0]) But check if this applies to stooq.
 data_list = data_list[1:] 
 
 data_list = np.asarray(data_list)
